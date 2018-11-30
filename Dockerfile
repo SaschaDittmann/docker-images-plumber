@@ -1,8 +1,7 @@
-# our R base image
 FROM bytesmith/rclient:3.4.3
+LABEL maintainer="info@bytesmith.de"
 
-# install packages
-# these are ones I like
+# install plumber
 RUN Revo64 -e 'install.packages(c("plumber"))' --no-save
 
 EXPOSE 8000
